@@ -21,7 +21,7 @@
 
 
 		insert = createObject("component", "dao.KundenDao").insert(#kunde#);
-
+		//WriteDump("#insert.getkundennr()#");
 	}
 	else if (isDefined("Form.btnDelete")){
 		kundenObj = EntityLoad("Kunden",Form.kundennr,true);
@@ -31,6 +31,8 @@
 </cfscript>
 <cfif isDefined("url.kundennr")>
 	<cfset kndNr = url.kundennr>
+<cfelseif isDefined("insert")>
+	<cfset kndNr = insert.getkundennr()>
 <cfelse>
 	<cfset kndNr = 0>
 </cfif>
