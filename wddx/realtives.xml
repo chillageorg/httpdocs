@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wddxPacket version='1.0'>
+	<header />
+	<data>
+		<struct>
+			<var name='FATHER'>
+				<string>Bob</string>
+			</var>
+			<var name='MOTHER'>
+				<string>Mary</string>
+			</var>
+			<var name='SISTERS'>
+				<array length='1'>
+					<string>Joan</string>
+				</array>
+			</var>
+			<var name='BROTHERS'>
+				<array length='2'>
+					<string>Tom</string>
+					<string>Jesse</string>
+				</array>
+			</var>
+		</struct>
+	</data>
+</wddxPacket>
