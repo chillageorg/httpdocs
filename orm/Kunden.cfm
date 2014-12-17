@@ -27,8 +27,8 @@
 </cfloop>
 </cfoutput>
 
-
 <!---
+
 <cfscript>
 kunde = StructNew();
 //kunde.kundennr = 5;
@@ -42,15 +42,15 @@ kunde.passwort = hash('test', 'MD5', 'UTF-8');
 kunde.kundeseit = Now();
 insert = createObject("component", "dao.KundenDao").insert(kunde);
 ka = EntityNew("KundenAdresse");
-ka.setstrasse("die Strasse");
-ka.setort("der Ort");
-ka.setplz("PLZ1");
+ka.setstrasse("die Strasse3");
+ka.setort("der Ort3");
+ka.setplz("PLZ3");
 ka.setkundennr(insert);
 EntitySave(ka);
 ka2 = EntityNew("KundenAdresse");
-ka2.setstrasse("die Strasse2");
-ka2.setort("der Ort2");
-ka2.setplz("PLZ2");
+ka2.setstrasse("die Strasse4");
+ka2.setort("der Ort4");
+ka2.setplz("PLZ4");
 ka2.setkundennr(insert);
 EntitySave(ka2);
 ormflush();
