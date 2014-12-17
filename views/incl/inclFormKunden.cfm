@@ -1,3 +1,4 @@
+
 <cfoutput>
 <h1>KundeID##: #Kunde.getkundennr()#</h1>
 <form class="form-horizontal" action="" method="post">
@@ -66,5 +67,21 @@
     </div>
 </div>
 
+</form>
+<cfwindow name="popAdresse" title="Neue Kundenadresse" draggable="false"
+        resizable="false" initshow="false" height="450" width="650" x=375 y=0 source="pop/popAdresse.cfm?kundennr=#Kunde.getkundennr()#">
+
+</cfwindow>
+<cfdiv bind="url:incl/inclAdressListe.cfm?kundennr=#Kunde.getkundennr()#" ID="theDiv"/>
+
+
+<form>
+
+<!--- Use the API to create, show, and hide Window 2 --->
+
+    <input type="button" value="neue Adresse"
+            onClick="ColdFusion.Window.show('popAdresse')">
+    <!-- <input type="button" value="Hide popAdresse"
+        onClick="ColdFusion.Window.hide('popAdresse')"> -->
 </form>
 </cfoutput>

@@ -1,3 +1,4 @@
+
 <cfscript>
 	if (isDefined("Form.btnSave")){
 
@@ -27,6 +28,17 @@
 		kundenObj = EntityLoad("Kunden",Form.kundennr,true);
 		delete = createObject("component", "dao.KundenDao").delete(#kundenObj#);
 
+	}
+	else if (isDefined("Form.btnAdresse")){
+		kundenObj = EntityLoad("Kunden",Form.kundennr,true);
+		//Adresse anlegen
+		ka = EntityNew("KundenAdresse");
+		ka.setstrasse(Form.strasse);
+		ka.setort(Form.ort);
+		ka.setplz(Form.plz);
+		ka.setkundennr(kundenObj);
+		EntitySave(ka);
+		ormFlush();
 	}
 </cfscript>
 <cfif isDefined("url.kundennr")>
