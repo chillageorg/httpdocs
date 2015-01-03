@@ -11,4 +11,6 @@
     <br>Note that the CGI variable is URL encoded.
 	--->
 	<cfdump var="#form#">
+	<cfdump var="#url#">
+	<cfdump var="#cookie#">
 </cfoutput>
