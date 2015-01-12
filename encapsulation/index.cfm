@@ -24,10 +24,7 @@
     Store alternative name and age properties so that this can
     walk like a girl and talk like a girl (ducktypeing... sort of).
 --->
-<cfset generic
-    .set( "name", "Anna" )
-    .set( "age", 35 )
-    />
+<cfset generic.set( "name", "Anna" ).set( "age", 35 ) />
 
 
 <!--- ----------------------------------------------------- --->
