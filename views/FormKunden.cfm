@@ -1,6 +1,10 @@
 
 <cfscript>
 	if (isDefined("Form.btnSave")){
+		strPw = Replace(Form.passwort, " ", "", "ALL");
+		if(Len(strPw)){
+			strPw = hash(strPw,"SHA");
+		}
 
 		kunde = StructNew();
 		if (isDefined("Form.kundennr") && Len(Trim(Form.kundennr))){
@@ -12,7 +16,7 @@
 		kunde.name = Form.name;
 		kunde.vorname = Form.vorname;
 		kunde.email = Form.email;
-		kunde.passwort = Form.passwort;
+		kunde.passwort = strPw;
 		if (isDefined("Form.kundeseit") && Len(Trim(Form.kundeseit))){
 			kunde.kundeseit = Form.kundeseit;
 		}

@@ -48,7 +48,7 @@
     </div>
 </div>
 <div class="control-group">
-    <label class="control-label" for="passwort">Passwort</label>
+    <label class="control-label" for="passwort">Passwort (SHA)</label>
     :
     <div class="controls">
       <input type="text" id="passwort" placeholder="Passwort" name="passwort" value="#Kunde.getpasswort()#">

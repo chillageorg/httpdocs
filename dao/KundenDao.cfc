@@ -17,6 +17,7 @@
 		<cfset KuindenNew.setkundeseit(arguments.kunde.kundeseit)>
 
 		<cfset EntitySave(KuindenNew)>
+		<cfset ormFlush()>
 		<cfreturn KuindenNew>
 	</cffunction>
 	<cffunction name="delete">
